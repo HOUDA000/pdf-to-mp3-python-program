@@ -32,7 +32,7 @@ if args.voice:
 
 # Process the PDF and convert to speech
 cleanText = ''
-for page in range(len(reader.pages)):
+for page in range(len(reader.pages)//10):
     text = reader.pages[page].extract_text()
     cleanText += text.strip().replace('\n', ' ')
 
